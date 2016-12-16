@@ -161,9 +161,8 @@ var Game = function(){
  	 				el.top.move(p(-1.5,0));
  	 				el.bottom.move(p(-1.5,0));
 
- 	 				if(el.top.x + el.top.w < 0){
- 	 					el.top.x = el.bottom.x = oldBlock.top.x + oldBlock.top.w + pjs.math.random(200,900);
- 	 					oldBlock = el;
+ 	 				if(el.top.x <= w/2){
+ 	 					
  	 					score += 1;
  	 				}
 
