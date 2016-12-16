@@ -54,6 +54,7 @@ var drawBG = function (){
     	}
     });
 };
+//lol
 var gr = [] , oldG;
 OOP.forInt(25, function(i){
 oldG = game.newImageObject({
@@ -159,6 +160,7 @@ var Game = function(){
 
  	 				el.top.move(p(-1.5,0));
  	 				el.bottom.move(p(-1.5,0));
+
  	 				if(el.top.x + el.top.w < 0){
  	 					el.top.x = el.bottom.x = oldBlock.top.x + oldBlock.top.w + pjs.math.random(200,900);
  	 					oldBlock = el;
@@ -252,7 +254,7 @@ game.newLoop('GameOver',function(){
 		pushVK.draw();
 		restart.draw();
 		if(mouse.isPeekObject("LEFT",restart)){
-			game.setLoop("game");
+			game.setLoop("menu");
 		}
 if(mouse.isPeekObject('LEFT',pushVK)){
 	VK.api("wall.post", {"message": "Ваш счет в игре : "+score}, function (data) {
